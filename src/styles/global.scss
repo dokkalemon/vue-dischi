@@ -1,6 +1,9 @@
 @import '@/styles/vars.scss';
 
 * {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
     color: red;
     font-family: $font-family;
 }
@@ -8,4 +11,17 @@
 body {
     background-color: $back-color;
     font-size: 16px;
+}
+
+.debug {
+    border: 1px solid red;
+}
+
+img {
+    height: 100%
+}
+
+.px-15 {
+    padding-left: 15px;
+    padding-right: 15px;
 }
