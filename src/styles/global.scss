@@ -1,0 +1,11 @@
+@import '@/styles/vars.scss';
+
+* {
+    color: red;
+    font-family: $font-family;
+}
+
+body {
+    background-color: $back-color;
+    font-size: 16px;
+}
