@@ -1,5 +1,5 @@
 <template>
-  <section class="card">
+  <section  class="card">
         <div class="card-conteiner">
             <div class="img">
                 <img :src="img" alt="">

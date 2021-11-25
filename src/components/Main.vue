@@ -1,26 +1,33 @@
 <template>
   <main class="full-width px-15">
-      <Card 
+        <div class="card-conteiner" v-if="albumList !== null">
+        
+        <Card   
         v-for="(album, index) in albumList"
         :key="`albumItem-${index}`"
-      :img="album.poster"
-      :title="album.title"
-      :author="album.author"
-      :years="album.year"
-      :genre="album.genre"
-      
-      />
+        :img="album.poster"
+        :title="album.title"
+        :author="album.author"
+        :years="album.year"
+        :genre="album.genre"
+        />
+        </div>
+        <div class="loader-conteiner" v-else>
+        <Loader />
+        </div>
   </main>
 </template>
 
 <script>
 import Card from '@/components/Card.vue'
+import Loader from '@/components/Loader.vue'
 import axios from 'axios';
 
 export default {
     name: 'Main',
     components: {
         Card,
+        Loader
     },
 
     data() {
@@ -52,10 +59,24 @@ export default {
 
 main {
     height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    .card-conteiner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .loader-conteiner {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $back-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
