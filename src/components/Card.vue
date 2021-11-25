@@ -1,14 +1,16 @@
 <template>
   <section class="card">
-         <div class="img">
-              <img :src="img" alt="">
-         </div>
-      <div class="info">
-          <h2>{{ title }}</h2>
-          <h3>{{ author }}</h3>
-          <h4>{{ years }}</h4>
-          <h5>{{ genre }}</h5>
+        <div class="card-conteiner">
+            <div class="img">
+                <img :src="img" alt="">
+            </div>
+        <div class="info">
+            <h2>{{ title }}</h2>
+            <h3>{{ author }}</h3>
+            <h4>{{ years }}</h4>
+            <h5>{{ genre }}</h5>
 
+        </div>
       </div>
   </section>
 </template>
@@ -32,11 +34,16 @@ export default {
 
 .card {
     width: calc(100% / 8);
-    background-color: $primary-color;
+    padding: 10px 20px;
+    height: 450px;
+    .card-conteiner {
+        background-color: $primary-color;
+        height: 100%;
         .img{
             padding: 10px;
             img {
             width: 100%;
+            
             }
         }
         .info {
@@ -44,6 +51,7 @@ export default {
             h2 {
                 text-transform: uppercase;
                 padding: 15px;
+                font-size: 20px;
             }
             h3 {
                 color: $secondary-color;
@@ -56,7 +64,9 @@ export default {
             h5 {
                 padding: 0 0 30px 0;
             }
+     
         }
     }
+}
 
 </style>

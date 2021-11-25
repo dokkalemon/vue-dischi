@@ -1,11 +1,13 @@
 <template>
-  <main class="full-width debug">
+  <main class="full-width px-15">
       <Card 
-      :img="albumList[0].poster"
-      :title="albumList[0].title"
-      :author="albumList[0].author"
-      :years="albumList[0].year"
-      :genre="albumList[0].genre"
+        v-for="(album, index) in albumList"
+        :key="`albumItem-${index}`"
+      :img="album.poster"
+      :title="album.title"
+      :author="album.author"
+      :years="album.year"
+      :genre="album.genre"
       
       />
   </main>
@@ -49,7 +51,7 @@ export default {
 @import '@/styles/vars';
 
 main {
-    height: calc(100vh - 60px);
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
