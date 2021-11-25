@@ -1,6 +1,13 @@
 <template>
   <main class="full-width debug">
-      <Card />
+      <Card 
+      :img="albumList[0].poster"
+      :title="albumList[0].title"
+      :author="albumList[0].author"
+      :years="albumList[0].year"
+      :genre="albumList[0].genre"
+      
+      />
   </main>
 </template>
 
@@ -43,6 +50,10 @@ export default {
 
 main {
     height: calc(100vh - 60px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
