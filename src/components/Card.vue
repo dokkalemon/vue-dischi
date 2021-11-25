@@ -41,7 +41,12 @@ export default {
         height: 100%;
         .img{
             padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
             img {
+                object-fit: contain;
             width: 100%;
             
             }
