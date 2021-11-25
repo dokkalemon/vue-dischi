@@ -35,7 +35,7 @@ export default {
 .card {
     width: calc(100% / 8);
     padding: 10px 20px;
-    height: 450px;
+    height: 420px;
     .card-conteiner {
         background-color: $primary-color;
         height: 100%;
