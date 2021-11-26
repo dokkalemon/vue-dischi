@@ -5,7 +5,7 @@
        </div>
        <div class="select">
            <select name="genreAlbum" id="" v-model="genreInput" @change="$emit('changeGenre', genreInput)">
-               <option value="all">All</option>
+               <option value="">All</option>
                <option value="rock">Rock</option>
                <option value="pop">Pop</option>
                <option value="jazz">Jazz</option>

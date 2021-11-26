@@ -4,7 +4,7 @@
     <Header @changeGenre="setGenre"/>
 
     <!-- Main -->
-    <Main :albumArray="albumList"/>
+    <Main :albumArray="filteredAlbum"/>
 
   </div>
 
@@ -25,6 +25,16 @@ export default {
   data() {
         return {
             albumList: null,
+            selectedGenre: '',
+        }
+    },
+
+    computed: {
+        filteredAlbum() {
+           if (this.selectedGenre === '') {
+             return console.log('nessun');
+           }
+           return console.log('con elementi');
         }
     },
 
@@ -43,6 +53,7 @@ export default {
 
         setGenre(prova) {
           console.log(prova);
+          this.selectedGenre = prova
         }
     }
 }
