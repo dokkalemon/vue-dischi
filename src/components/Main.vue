@@ -1,9 +1,9 @@
 <template>
   <main class="full-width px-15">
-        <div class="card-conteiner" v-if="albumList !== null">
+        <div class="card-conteiner" v-if="albumArray !== null">
         
         <Card   
-        v-for="(album, index) in albumList"
+        v-for="(album, index) in albumArray"
         :key="`albumItem-${index}`"
         :img="album.poster"
         :title="album.title"
@@ -21,16 +21,20 @@
 <script>
 import Card from '@/components/Card.vue'
 import Loader from '@/components/Loader.vue'
-import axios from 'axios';
+/* import axios from 'axios'; */
 
 export default {
     name: 'Main',
     components: {
         Card,
-        Loader
-    },
+        Loader,
 
-    data() {
+    },
+        props: {
+            albumArray: Array,
+        },
+
+    /* data() {
         return {
             albumList: null,
         }
@@ -48,7 +52,7 @@ export default {
             })
             .catch(err => console.log(err))
         }
-    }
+    } */
 
     
 }

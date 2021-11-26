@@ -31,11 +31,11 @@ header {
     display: flex;
 
     .logo {
-        border: 1px solid red;
+
         height: 100%;
     }
     .select {
-        border: 1px solid red;
+
         flex-grow: 1;
         display: flex;
         justify-content: flex-end;
