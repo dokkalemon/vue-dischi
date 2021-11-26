@@ -32,9 +32,11 @@ export default {
     computed: {
         filteredAlbum() {
            if (this.selectedGenre === '') {
-             return console.log('nessun');
+             return this.albumList;
            }
-           return console.log('con elementi');
+           return this.albumList.filter(item => {
+             return item.genre.toLowerCase().includes(this.selectedGenre.toLowerCase())
+           })
         }
     },
 
