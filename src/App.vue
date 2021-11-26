@@ -54,7 +54,6 @@ export default {
         },
 
         setGenre(prova) {
-          console.log(prova);
           this.selectedGenre = prova
         }
     }
