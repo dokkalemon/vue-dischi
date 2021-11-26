@@ -4,12 +4,12 @@
        <img src="@/assets/logo-spotify.png" alt="">
        </div>
        <div class="select">
-           <select name="" id="">
-               <option value="">All</option>
-               <option value="">Rock</option>
-               <option value="">Pop</option>
-               <option value="">Jazz</option>
-               <option value="">Metal</option>
+           <select name="genreAlbum" id="" v-model="genreInput" @change="$emit('changeGenre', genreInput)">
+               <option value="all">All</option>
+               <option value="rock">Rock</option>
+               <option value="pop">Pop</option>
+               <option value="jazz">Jazz</option>
+               <option value="metal">Metal</option>
            </select>
        </div>
    </header>
@@ -17,7 +17,13 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+
+    data() {
+        return {
+            genreInput: '',
+        }
+    }
 }
 </script>
 

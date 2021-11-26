@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <!-- Header -->
-    <Header />
+    <Header @changeGenre="setGenre"/>
 
     <!-- Main -->
     <Main :albumArray="albumList"/>
@@ -39,6 +39,10 @@ export default {
                 this.albumList = result.data.response;
             })
             .catch(err => console.log(err))
+        },
+
+        setGenre(prova) {
+          console.log(prova);
         }
     }
 }
